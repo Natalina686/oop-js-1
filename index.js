@@ -22,7 +22,7 @@ class Nutrition {
 
 class Food extends Nutrition {
     #fatty;
-constructor ( { calories, vegan, fatty, healthy } ) {
+constructor (calories, vegan, fatty, healthy) {
     super(calories);
     this.vegan = vegan;
     this.#fatty = fatty;
@@ -55,7 +55,7 @@ console.log(bestFood.getFatty());
 
 class Drink extends Nutrition {
     #sweet;
-    constructor ({ calories, bitter, sweet, sour }) {
+    constructor (calories, bitter, sweet, sour) {
         super(calories);
         this.bitter = bitter;
         this.#sweet = sweet;
