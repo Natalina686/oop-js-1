@@ -15,11 +15,6 @@ getCalories() {
         console.log("Mmm", this.dessert);
     }
 }
-const cake = new Nutrition(400, "Raffaello", "to coffe");
-cake.sayYammy();
-const wisky = new Nutrition(1000, "Wisky 5 star", "to good mood");
-wisky.getCalories();
-
 
 class Supplement extends Nutrition {
     #spicy;
@@ -61,15 +56,6 @@ tasty() {
 
 }
 
-
-const food = new Food("soya", "chips", "vegetables")
-
-const fatty = new Food("cheese")
-food.tasty();
-
-
-
-
 class Drink extends Nutrition {
     #sweet;
     constructor (calories, bitter, sweet, sour) {
@@ -94,12 +80,43 @@ class Drink extends Nutrition {
 }
 
 
+// Ти можешь додати ще класи Dessert та Snack які будуть успадковуватися від класу Food
+class Dessert extends Food {
+    constructor(name) {
+        super(name);
+        this.healthy = false;
+        this.vegan = ["yes", "again yes"];
+    }
+    chooseMeal() {
+        console.log(`Congratulations! You chose ${this.name}`)
+    }
+}
+
+class Snack extends Food {
+    constructor(name) {
+        super(name);
+        this.healthy = false;
+        this.vegan = ["yes", "again yes"];
+    }
+    chooseMeal() {
+        console.log(`Congratulations! You chose ${this.name}`)
+    }
+}
+
+const cake = new Nutrition(400, "Raffaello", "to coffe");
+cake.sayYammy();
+const wisky = new Nutrition(1000, "Wisky 5 star", "to good mood");
+wisky.getCalories();
+const food = new Food("soya", "chips", "vegetables")
+const fatty = new Food("cheese")
+food.tasty();
 const drink = new Drink("200", "shweps", "cola", "limonchello")
 drink.tasty();
 console.log(drink.getSweet());
 drink.getCalories();
-
 const supplement = new Supplement(240, "chooros", "fish", "sea-salt", "pepper");
 console.log(supplement);
-
-
+const dessert = new Dessert("dessert");
+console.log(dessert.name);
+dessert.chooseMeal();
+  
