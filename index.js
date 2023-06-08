@@ -95,9 +95,13 @@ class Dessert extends Food {
 class Snack extends Food {
     constructor(name) {
         super(name);
-        this.healthy = false;
-        this.vegan = ["yes", "again yes"];
+        
     }
+    what() {
+    super.getVegan()
+    console.log("vegan");
+    }
+
     chooseMeal() {
         console.log(`Congratulations! You chose ${this.name}`)
     }
@@ -119,4 +123,5 @@ console.log(supplement);
 const dessert = new Dessert("dessert");
 console.log(dessert.name);
 dessert.chooseMeal();
-  
+const snack = new Snack("chips");
+  snack.what();
