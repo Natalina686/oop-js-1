@@ -87,6 +87,10 @@ class Dessert extends Food {
         this.healthy = false;
         this.vegan = ["yes", "again yes"];
     }
+    what() {
+        super.getVegan()
+        console.log("vegan");
+        }
     chooseMeal() {
         console.log(`Congratulations! You chose ${this.name}`)
     }
